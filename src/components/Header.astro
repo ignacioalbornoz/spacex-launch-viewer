@@ -1,0 +1,32 @@
+---
+import HeaderButton from "./HeaderButton.astro"
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+  <div class="mx-auto text-center mb-8 lg:mb-16">
+    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+      SpaceX launches 🚀
+    </h2>
+    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+      All the information about SpaceX launches
+    </p>
+  </div>
+
+  <nav
+    class="flex flex-col items-center justify-between w-full text-center
+    md:flex-row"
+  >
+    <HeaderButton href="/">
+      Últimos lanzamientos
+    </HeaderButton>
+    <a class="text-white" href="/about">
+      <svg slot="before" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M12 9h.01" /><path d="M11 12h1v4h1" /></svg>
+      Sobre el proyecto
+    </a>
+    <a class="text-white" href="/oldest">
+      Los más viejos
+    </a>
+  </nav>
+
+</header>
+  

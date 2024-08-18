@@ -1,0 +1,17 @@
+---
+interface Props {
+	href: string;
+}
+
+const { href } = Astro.props;
+---
+
+
+<a
+  class="text-white"
+  href={href}
+>
+  <slot name="before" />
+  <slot>El contenido por defecto <slot />
+  <slot name="after" />
+</a>
