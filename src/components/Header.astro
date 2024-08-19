@@ -1,4 +1,5 @@
 ---
+import { Counter } from "./Counter";
 import HeaderButton from "./HeaderButton.astro";
 ---
 
@@ -11,6 +12,8 @@ import HeaderButton from "./HeaderButton.astro";
       All the information about SpaceX launches
     </p>
   </div>
+
+  <Counter client:visible transition:persist />
 
   <nav
     class="flex flex-col items-center justify-between w-full text-center

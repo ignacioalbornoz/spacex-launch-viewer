@@ -1,24 +1,22 @@
 ---
-const res = await fetch("https://api.spacexdata.com/v5/launches/query", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    query: {},
-    options: {
-      sort: {
-        date_unix: "desc",
-      },
-      limit: 12,
-    },
-  }),
-});
-const launches = JSON.stringify(await res.json());
+import CardLaunch from "./CardLaunch.astro";
+import { getLatestLaunches } from "../services/spacex.ts";
 
-console.log(launches);
+const launches = await getLatestLaunches();
 ---
 
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  <article></article>
+  {
+    launches.map(({ id, links, details, flight_number, success }) => (
+      <CardLaunch
+        id={id}
+        img={links.patch.small}
+        details={details}
+        flightNumber={flight_number}
+        success={success}
+      />
+    ))
+  }
 </div>
+
+<style></style>
