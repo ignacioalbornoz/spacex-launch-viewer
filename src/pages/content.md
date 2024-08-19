@@ -5,9 +5,18 @@
 
 # Hola
 
-Lorem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-## Subtítulo
+## Sub 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ## Sub 2
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+```javascript
+function (){
+    console.log('hola mundo')
+}
+```
